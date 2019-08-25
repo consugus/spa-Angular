@@ -1,8 +1,12 @@
-<h1>Heroes de <small>Marvel y DC</small></h1>
+
+
+
+
+<h1>Resultados para la búsqueda de "{{ str }}"</h1>
 <div class="card-columns">
 
-  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes" >
-    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes">
+    <img [src]="heroe.img" class="card-img-top" [alt]="">
     <div class="card-body">
       <h5 class="card-title">{{ heroe.nombre }}</h5>
       <p class="card-text">{{ heroe.bio }}</p>
@@ -13,8 +17,14 @@
       <!-- ======================================================== -->
       <!-- <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">Ver más...</button> -->
       <a  [routerLink]="[ '/heroe', heroe.id ]" class="btn btn-outline-primary btn-block">Ver mas...</a>
-
     </div>
   </div><!-- end .card -->
-
 </div><!-- end .card-columns -->
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length === 0">
+    <div class="col-md-12">
+      <div class="alert alert-info" role="alert">
+        No existen resultados con el término: {{ str }}
+      </div>
+    </div>
+  </div>
