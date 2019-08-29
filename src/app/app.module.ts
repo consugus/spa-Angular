@@ -18,6 +18,7 @@ import { AboutComponent } from './components/about/about.component';
 import { Routes } from '@angular/router';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SearchComponent } from './components/search/search.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 
 @NgModule({
@@ -28,7 +29,9 @@ import { SearchComponent } from './components/search/search.component';
     HeroesComponent,
     AboutComponent,
     HeroeComponent,
-    SearchComponent
+    SearchComponent,
+    HeroeTarjetaComponent,
+
   ],
   imports: [
     BrowserModule,

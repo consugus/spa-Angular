@@ -5,21 +5,26 @@
 <h1>Resultados para la búsqueda de "{{ str }}"</h1>
 <div class="card-columns">
 
-  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes">
+  <app-heroe-tarjeta [heroe]="heroecito"*ngFor="let heroecito of heroes"></app-heroe-tarjeta>
+  <!-- <div class="card animated fadeIn fast" *ngFor="let heroe of heroes">
     <img [src]="heroe.img" class="card-img-top" [alt]="">
     <div class="card-body">
       <h5 class="card-title">{{ heroe.nombre }}</h5>
       <p class="card-text">{{ heroe.bio }}</p>
-      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p> -->
 
       <!-- ======================================================== -->
       <!-- Se puede realizar la tarea de las siguientes dos formas: -->
       <!-- ======================================================== -->
       <!-- <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">Ver más...</button> -->
-      <a  [routerLink]="[ '/heroe', heroe.id ]" class="btn btn-outline-primary btn-block">Ver mas...</a>
-    </div>
-  </div><!-- end .card -->
-</div><!-- end .card-columns -->
+      <!-- <a  [routerLink]="[ '/heroe', heroe.id ]" class="btn btn-outline-primary btn-block">Ver mas...</a> -->
+    <!-- </div> -->
+  <!-- </div> -->
+  <!-- end .card -->
+<!-- </div> -->
+<!-- end .card-columns -->
+
+
 
 <div class="row animated fadeIn fast" *ngIf="heroes.length === 0">
     <div class="col-md-12">
